@@ -59,3 +59,56 @@ Send following string to switch gpos
 | GPO     | 2      | ON  | OFF | GPIO13     |
 | GPO     | 3      | ON  | OFF | GPIO25     |
 | GPO     | 4      | ON  | OFF | GPIO23     |
+
+## Autostart
+
+go to homedirectroy
+
+```
+cd
+```
+
+enter this line to create a file
+
+```
+sudo nano /etc/systemd/system/gpio-remote.service
+```
+
+paste this into the file, replace <your-username> with your username eg. pi.
+
+```
+[Unit]
+Description=raspi-gpio
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node /home/<your-username>/raspi-gpio/index.js
+WorkingDirectory=/home/<your-username>/raspi-gpio
+Restart=always
+User=pi
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Ctrl + X to exit
+
+enter this line to relouad the daemon
+
+```
+sudo systemctl daemon-reload
+```
+
+enter this line to put in autostart
+
+```
+sudo systemctl enable gpio-remote.service
+```
+
+reboot and find out if it's working
+
+```
+sudo reboot
+```
