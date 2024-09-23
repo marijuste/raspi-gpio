@@ -43,15 +43,15 @@ node index.js
 
 Add a generic udp-connection in companion.
 
-![](img/add_connection.PNG)
+![add](img/add_connection.PNG)
 
 Enter the the desired ip of your raspberry and port 9091.
 
-![](img/setup_connection.PNG)
+![setup](img/setup_connection.PNG)
 
 Send following string to switch gpos
 
-![](img/use_udp.PNG)
+![use](img/use_udp.PNG)
 
 | Message | Number | On  | Off | GPIO RASPI |
 | ------- | ------ | --- | --- | ---------- |
