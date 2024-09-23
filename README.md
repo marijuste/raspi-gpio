@@ -19,7 +19,10 @@ sudo apt install git
 ```
 
 clone repository
+
+```
 git clone https://github.com/marijuste/raspi-gpio.git
+```
 
 enter repository
 
