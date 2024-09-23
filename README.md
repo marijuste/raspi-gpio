@@ -74,7 +74,7 @@ enter this line to create a file
 sudo nano /etc/systemd/system/gpio-remote.service
 ```
 
-paste this into the file, replace <your-username> with your username eg. pi.
+paste this into the file, replace `<your-username>` with your username eg. pi.
 
 ```
 [Unit]
